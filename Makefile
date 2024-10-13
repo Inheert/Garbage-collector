@@ -1,6 +1,6 @@
 NAME = garbage_collector.a
 
-CC = gcc
+CC = cc
 
 CFLAGS = -g3 -Wall -Wextra -Werror
 
