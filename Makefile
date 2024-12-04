@@ -11,7 +11,6 @@ BIN_DIR = ./bin
 
 SOURCES = src/garbage_collector.c \
 			src/manipulation.c \
-			src/tracking.c \
 			src/ft_malloc.c \
 			src/t_ptr_stockage_utils.c \
 
@@ -27,7 +26,7 @@ $(BIN_DIR)/%.o: $(SRC_DIR)/%.c
 	@$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES)
 
 clean:
-	@rm -f $(BIN_DIR)/**/*.o
+	@rm -rf $(BIN_DIR)
 
 fclean: clean
 	@rm -f $(NAME)

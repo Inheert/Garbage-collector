@@ -20,7 +20,7 @@ This will compile the source files and create the garbage_collector.a library.
 
 ## Usage
 
-Include the 
+Include the
 
 garbage_collector.h
 
@@ -40,8 +40,7 @@ int main() {
         gb_malloc(10);
         size += 1;
     }
-
-    gb_display(8);
+	gb_free_all();
     return 0;
 }
 ```
@@ -62,7 +61,3 @@ gcc -o my_program my_program.c -L. -lgarbage_collector
 - `void gb_unstore_malloc(void *ptr)`: Unstore a malloc pointer from the garbage collector.
 - `void gb_free(void *ptr)`: Free a pointer and remove it from the garbage collector.
 - `void gb_free_all(void)`: Free all pointers in the garbage collector.
-
-### Display Functions
-
-- `void gb_display(int container_per_line)`: Display the current state of the garbage collector.
